@@ -45,7 +45,7 @@ var Reveal = (function(){
 			overview: true,
 
 			// Vertical centring of slides
-			center: true,
+			center: false,
 
 			// Enables touch navigation on devices with touch input
 			touch: true,
@@ -1048,7 +1048,10 @@ var Reveal = (function(){
 				if( config.center ) {
 					// Vertical stacks are not centred since their section
 					// children will be
-					if( slide.classList.contains( 'stack' ) ) {
+					if( slide.classList.contains('bottom') || slide.classList.contains('top')){
+
+					}
+					else if( slide.classList.contains( 'stack' ) ) {
 						slide.style.top = 0;
 					}
 					else {
